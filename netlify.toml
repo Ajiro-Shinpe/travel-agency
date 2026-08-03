@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  environment = { NODE_VERSION = "20" }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Enable Netlify Forms (optional if you want to use Netlify's form handling)
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Image optimization settings
+[[plugins]]
+  package = "@netlify/plugin-images"
+
+# Headers are also handled in public/_headers but you can set them here too
+[[headers]]
+  for = "/*"
+  [headers.values]
+  X-Frame-Options = "DENY"
+  X-XSS-Protection = "1; mode=block"
+  X-Content-Type-Options = "nosniff"

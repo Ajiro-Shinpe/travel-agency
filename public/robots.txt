@@ -1,0 +1,16 @@
+# robots.txt for Al-Buraq Travel & Tours
+# https://alburaqtours.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://alburaqtours.com/sitemap.xml
+
+# Block private or admin directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl-delay to be respectful of server resources
+Crawl-delay: 1
