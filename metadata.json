@@ -1,6 +1,0 @@
-{
-  "name": "Karachi Travel & Tours Agency",
-  "description": "A premium config-driven travel and tour website for a Karachi-based agency, supporting Islamic Tourism and Holiday Planner modes.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
