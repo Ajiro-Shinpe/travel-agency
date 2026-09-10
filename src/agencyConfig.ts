@@ -1,6 +1,6 @@
 /**
- * Centralized Configuration for Al-Buraq Hajj & Umrah Travel Agency website.
- * Purely dedicated to Islamic pilgrimage services from Karachi.
+ * Centralized Configuration for Al-Buraq Global Tours
+ * Premium outbound & domestic tourism packages from Karachi, Pakistan
  */
 
 export interface TravelPackage {
@@ -28,25 +28,25 @@ export interface ServiceItem {
 
 export interface Testimonial {
   name: string;
-  relation: string; // Karachi residency details
+  relation: string;
   rating: number;
   text: string;
   packageUsed: string;
 }
 
 export interface ThemeColors {
-  primary: string;        // emerald for Islamic theme
-  accent: string;         // amber
-  navBg: string;          // background for navigation
-  heroBgGradient: string; // main gradient overlay
-  primaryBtn: string;     // bg-emerald-600 hover:bg-emerald-700
-  secondaryBtn: string;   // border styles
-  badgeBg: string;        // badge style element
-  textPrimary: string;    // text-emerald-800
-  textAccent: string;     // text-amber-500
-  lightBg: string;        // light theme backdrop
-  footerBg: string;       // footer background
-  cardBorderHover: string;// hover border ring
+  primary: string;
+  accent: string;
+  navBg: string;
+  heroBgGradient: string;
+  primaryBtn: string;
+  secondaryBtn: string;
+  badgeBg: string;
+  textPrimary: string;
+  textAccent: string;
+  lightBg: string;
+  footerBg: string;
+  cardBorderHover: string;
 }
 
 export interface AgencyConfig {
@@ -75,27 +75,29 @@ export interface AgencyConfig {
     karachiSignificance: string;
   };
   testimonials: Testimonial[];
-  destinations: string[]; // for contact form options
-  faqs: Array<{q: string; a: string}>;
+  destinations: string[];
+  faqs: Array<{ q: string; a: string }>;
 }
 
-// Single, dedicated configuration for Hajj, Umrah & Ziyarats
 export const agencyConfig: AgencyConfig = {
-  agencyName: 'Al-Buraq Travel & Tours (KHI)',
+  agencyName: 'Al-Buraq Global Tours',
   logoText: 'Al-Buraq Tours',
-  tagline: 'Your Sacred Journey Begun with Perfect Trust',
+  tagline: 'Discover the World. Start from Karachi.',
   dtsLicense: 'DTS License No: KHI-7862/2026',
   phone: '923112872129',
   phoneFormatted: '0311-2872129',
-  email: 'hajj-umrah@alburaqtours.com',
+  email: 'hello@alburaqtours.com',
   address: 'Suite 4C, 2nd Floor, Al-Buraq Plaza, Commercial Lane Phase 2 Ext, DHA, Karachi, Pakistan',
+
   hero: {
-    title: 'Trusted Hajj, Umrah & Spiritual Ziyarats from Karachi',
-    subtitle: 'Complete premium direct-flight group packages with Karachi-based scholars, premium star-hotels steps from Haram boundaries, and absolute government DTS licensing.',
+    title: 'Premium International & Pakistan Tours from Karachi',
+    subtitle:
+      'Hand-crafted group & private journeys to Japan, Switzerland, Europe, Turkey, Dubai, Hunza & more. Direct flights, 4–5 star hotels, expert local guides and seamless visa support.',
     ctaPrimary: 'Explore Packages',
     ctaSecondary: 'Chat on WhatsApp',
-    heroImage: './src/assets/images/hero_islamic_1779272851321.png'
+    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1600'
   },
+
   colors: {
     primary: 'emerald',
     accent: 'amber',
@@ -110,168 +112,232 @@ export const agencyConfig: AgencyConfig = {
     footerBg: 'bg-black',
     cardBorderHover: 'hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5'
   },
+
   trustBadges: [
     {
-      title: 'Pakistan DTS Verification',
-      description: 'Approved DTS License (KHI-7862/2026), Ministry of Hajj & Pilgrimage Affairs.',
+      title: 'Pakistan DTS Licensed',
+      description: 'Fully licensed tour operator (KHI-7862/2026) under the Ministry of Tourism.',
       iconName: 'ShieldCheck'
     },
     {
       title: 'Direct Group Operations',
-      description: 'No middleman. End-to-end direct hotel, transport & visa handling from Karachi.',
+      description: 'No middlemen. End-to-end flights, hotels, transfers & experiences managed from Karachi.',
       iconName: 'Users'
     },
     {
-      title: 'On-Ground Guides',
-      description: 'Karachi guides & Islamic scholars join the group to lead pilgrimage step-by-step.',
+      title: 'Expert Local Guides',
+      description: 'Professional English & Urdu speaking guides in every destination for authentic experiences.',
       iconName: 'Compass'
     },
     {
-      title: 'Direct Flight Operations',
-      description: 'Guaranteed group booking with leading direct airlines from Jinnah International KHI.',
+      title: 'Preferred Airline Partners',
+      description: 'Guaranteed group seats with leading airlines from Jinnah International Airport (KHI).',
       iconName: 'PlaneTakeoff'
     }
   ],
+
   services: [
     {
-      title: 'Premium Umrah Packages',
-      description: 'We offer economy premium, 4-star, and 5-star customized or group Umrah programs with close-by hotel bookings.',
-      iconName: 'Moon'
+      title: 'International Group Tours',
+      description: 'Curated fixed-departure packages to Japan, Switzerland, Europe, Turkey, Malaysia, Thailand & more.',
+      iconName: 'Globe'
     },
     {
-      title: 'Official Hajj Processing',
-      description: 'Government and Private Hajj quotas. Complete training sessions held in Karachi prior to departures.',
+      title: 'Luxury Private Journeys',
+      description: 'Fully customisable private tours with 5-star hotels, private transfers and personal itineraries.',
       iconName: 'Award'
     },
     {
-      title: 'Iraq & Iran Ziyarats',
-      description: 'Accompanied group journeys to Najaf, Karbala, Baghdad, and Mashhad with premium hotels and local security.',
-      iconName: 'Map'
+      title: 'Pakistan Adventure Tours',
+      description: 'Hunza, Skardu, Fairy Meadows, Naran-Kaghan and cultural circuits with premium stays.',
+      iconName: 'Mountain'
     },
     {
-      title: 'Family Visa Processing',
-      description: 'Hassle-free eVisa processing for Umrah within 48-72 business hours.',
+      title: 'Visa & Documentation',
+      description: 'Fast-track visa assistance for Schengen, Japan, UK, USA, Turkey and other destinations.',
       iconName: 'FileCheck'
     },
     {
-      title: 'AC Luxury Coach Transfers',
-      description: 'High-quality VIP coaches for transport between Jeddah, Makkah, Madinah, and Ziyarat spots.',
+      title: 'Airport Transfers & Coaches',
+      description: 'Private luxury vehicles and air-conditioned coaches for seamless transfers worldwide.',
       iconName: 'Bus'
     },
     {
-      title: 'Halal Full-Board Meals',
-      description: 'Daily buffet breakfast, lunch, and dinner with authentic Pakistani taste specially customized for our groups.',
-      iconName: 'Utensils'
+      title: 'Curated Experiences',
+      description: 'Food tours, cultural shows, adventure activities and exclusive local experiences included.',
+      iconName: 'Sparkles'
     }
   ],
+
   packages: [
     {
-      id: '1',
-      title: 'Premium 15-Day Umrah Group Package',
-      price: 'PKR 345,000',
-      stay: '7 Nights Makkah (5-Star Hotel steps from Haram) & 7 Nights Madinah (4-Star Near Nabawi)',
-      inclusions: ['✈️ Direct KHI Flights', '🏨 5-Star Hotel (Makkah)', '🚌 AC Coach Transport', '📑 Visa & Health Ins.'],
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdH8nbMZRXEhtDbtlLWKxCqNAyaGbnxzS-3rgQ3uoj-CJz37D3FnD5eatS&s=10',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I am interested in booking the Premium 15-Day Umrah Group Package departing from Karachi.',
-      badge: '⭐️ Popular'
+      id: 'japan-spring',
+      title: 'Japan Cherry Blossom Tour – 10 Days',
+      price: 'PKR 485,000',
+      stay: 'Tokyo • Mount Fuji • Kyoto • Osaka (4–5★ hotels)',
+      inclusions: [
+        '✈️ Direct / 1-stop flights from KHI',
+        '🏨 4–5 Star Hotels',
+        '🚌 Private AC Coach',
+        '📑 Japan Visa Assistance',
+        ' commuter JR Pass'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, I am interested in the Japan Cherry Blossom Tour from Karachi.',
+      badge: '🌸 Popular'
     },
     {
-      id: 'pkg-u-exec',
-      title: 'Custom VIP Executive Umrah Package',
-      price: 'PKR 495,000',
-      stay: 'Flexible stay with Dar Al Tawhid Makkah & Pullman Zamzam Madinah',
-      inclusions: ['✈️ Direct Saudia Flight', '🏨 5-Star Luxury Frontage', '🚗 VIP Private Transfer', '📑 Fast Visa Service'],
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5KuQDZcWm6U--eQhkU-JOGbQ0cYigcXnIvfMsoOc0A&s=10',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I would like to get a quote for the Custom VIP Executive Umrah Package from Karachi.',
-      badge: '✨ Elite Luxury'
+      id: 'swiss-alps',
+      title: 'Swiss Alps & Lakes – 9 Days',
+      price: 'PKR 595,000',
+      stay: 'Zurich • Lucerne • Interlaken • Geneva (4–5★)',
+      inclusions: [
+        '✈️ Flights from KHI',
+        '🏨 Premium Alpine Hotels',
+        '🚆 Swiss Travel Pass',
+        '📑 Schengen Visa Support',
+        '🚤 Lake Cruise'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, I would like details of the Swiss Alps & Lakes package.',
+      badge: '✨ Best Seller'
     },
     {
-      id: 'pkg-hajj-2026',
-      title: 'Official 2026 Hajj Complete Package',
-      price: 'PKR 895,000',
-      stay: '25 Days in Makkah & Madinah with premium accommodation',
-      inclusions: ['✈️ Direct PIA Flights', '🏨 5-Star Makkah Hotel', '🚌 Private Transport', '📑 Hajj Visa Included', '🍽️ Full Board Meals'],
-      imageUrl: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&q=80&w=800',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I am interested in the Official 2026 Hajj Complete Package from Karachi.',
-      badge: '🎯 Limited Spots'
-    },
-
-    {
-      id: 'pkg-ziy-iraq',
-      title: 'Baghdad, Najaf & Karbala Ziyarat Tour',
-      price: 'PKR 290,000',
-      stay: '10 Days group itinerary guided by local scholars. 3 Meals included.',
-      inclusions: ['✈️ Air Arabia Route', '🏨 Standard Close Hotels', '🚌 VIP Escort Transport', '📑 Group Visa Included'],
-      imageUrl: 'https://images.unsplash.com/photo-1718680962024-0fa899e1815e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FyYmFsYXxlbnwwfHwwfHx8MA%3D%3D',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I am interested in joining the next Baghdad, Najaf & Karbala Ziyarat departure from Karachi.',
-      badge: '🕋 Scholar Guided'
+      id: 'europe-classic',
+      title: 'Classic Europe Explorer – 14 Days',
+      price: 'PKR 725,000',
+      stay: 'Paris • Amsterdam • Brussels • Switzerland • Italy',
+      inclusions: [
+        '✈️ Return Flights',
+        '🏨 4-Star Central Hotels',
+        '🚌 Luxury Coach',
+        '📑 Multi-Entry Schengen',
+        '🎟️ Key Attractions'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, interested in the Classic Europe Explorer package.',
+      badge: '🌍 Most Booked'
     },
     {
-      id: 'pkg-hajj-2027',
-      title: 'Official 2027 Hajj Complete Package',
-      price: 'PKR 925,000',
-      stay: '27 Days in Makkah & Madinah with premium accommodation',
-      inclusions: ['✈️ Direct PIA Flights', '🏨 5-Star Makkah Hotel', '🚌 Private Transport', '📑 Hajj Visa Included', '🍽️ Full Board Meals', '🛡️ Extended Insurance'],
-      imageUrl: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&q=80&w=800',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I am interested in the Official 2027 Hajj Complete Package from Karachi.',
-      badge: '🔥 Pre-Book Now'
+      id: 'hunza-skardu',
+      title: 'Hunza & Skardu Premium – 8 Days',
+      price: 'PKR 185,000',
+      stay: 'Hunza • Passu • Skardu • Deosai (Boutique & 4★)',
+      inclusions: [
+        '✈️ Domestic Flights / Road',
+        '🏨 Premium Mountain Lodges',
+        '🚙 Private 4x4',
+        '📸 Photography Guide',
+        '🍽️ Full Board'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, I want to book the Hunza & Skardu Premium tour.',
+      badge: '🏔️ Domestic Favourite'
     },
     {
-      id: 'pkg-ziy-iran',
-      title: 'Mashhad & Qom Iran Ziyarat Tour',
-      price: 'PKR 325,000',
-      stay: '12 Days group itinerary with religious scholars. All meals included.',
-      inclusions: ['✈️ Iran Air Flights', '🏨 Premium Hotels', '🚌 Private Transport', '📑 Iran Visa Included', '🍽️ Daily Meals'],
-      imageUrl: 'https://5.imimg.com/data5/ZZ/RB/IU/SELLER-73177103/ziyarat-packages-iran-services.png',
-      whatsappQuery: 'Assalam-o-Alaikum Al-Buraq Tours, I am interested in joining the Mashhad & Qom Iran Ziyarat Tour from Karachi.',
-      badge: '🕌 New Departure'
+      id: 'turkey-cappadocia',
+      title: 'Turkey & Cappadocia Magic – 8 Days',
+      price: 'PKR 265,000',
+      stay: 'Istanbul • Cappadocia • Pamukkale',
+      inclusions: [
+        '✈️ Direct Flights',
+        '🏨 Cave Hotels + 5★ Istanbul',
+        '🎈 Hot Air Balloon (optional)',
+        '📑 E-Visa Included',
+        '🚌 Private Transfers'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, interested in Turkey & Cappadocia package.',
+      badge: '🎈 Trending'
+    },
+    {
+      id: 'dubai-abu-dhabi',
+      title: 'Dubai & Abu Dhabi Luxury – 6 Days',
+      price: 'PKR 195,000',
+      stay: 'Downtown Dubai + Yas Island (5★)',
+      inclusions: [
+        '✈️ Direct Flights',
+        '🏨 5-Star Hotels',
+        '🚗 Private Transfers',
+        '🎟️ Desert Safari + City Tour',
+        '🛍️ Shopping Assistance'
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800',
+      whatsappQuery:
+        'Assalam-o-Alaikum Al-Buraq Tours, I want the Dubai & Abu Dhabi Luxury package.',
+      badge: '💎 Quick Getaway'
     }
   ],
-    about: {
-      headline: 'Over 15 Years of Serving Pilgrims in Karachi with Unmatched Honour',
-      bioParagraph: 'Operating from our central office in DHA Karachi, we have been blessed to assist thousands of pilgrims in performing their holy obligations. We operate on a zero-compromise quality standard, ensuring our elders, women, and families from Karachi receive top-tier, direct support from the moment they step into Jinnah International Airport until their secure return.',
-      karachiSignificance: 'Convenient physical office in Karachi for face-to-face trust builder documents review, fingerprint guides, and daily pre-flight training sessions.'
+
+  about: {
+    headline: '15+ Years Crafting Unforgettable Journeys from Karachi',
+    bioParagraph:
+      'Based in the heart of DHA Karachi, Al-Buraq Global Tours has helped thousands of Pakistani and international travellers explore the world with confidence. From the cherry blossoms of Japan to the alpine lakes of Switzerland and the majestic valleys of Hunza, we design experiences that balance comfort, authenticity and value.',
+    karachiSignificance:
+      'Our physical office in DHA makes face-to-face planning easy. Visit us for itinerary customisation, document review and pre-departure briefings.'
+  },
+
+  testimonials: [
+    {
+      name: 'Ayesha & Family',
+      relation: 'Clifton, Karachi',
+      rating: 5,
+      text: 'The Japan Cherry Blossom tour was flawless. Hotels were excellent, the guide was fantastic, and everything ran on time. Highly recommend Al-Buraq for international trips.',
+      packageUsed: 'Japan Cherry Blossom'
     },
-    testimonials: [
-      {
-        name: 'Dr. Faisal Shah',
-        relation: 'Malir Cantonment, Karachi',
-        rating: 5,
-        text: 'Al-Buraq handled Umrah arrangements for my elderly parents. They were extremely concerned due to distance to Haram, but Al-Buraq provided them with a wheelchair-friendly room just 3 minutes walk from the central gate. Simply outstanding support!',
-        packageUsed: 'Premium 15-Day Umrah'
-      },
-      {
-        name: 'Mrs. S. Batool',
-        relation: 'Gulshan-e-Iqbal, Karachi',
-        rating: 5,
-        text: 'For the Ziyarat of Iraq, our entire family travelled with them. Extremely structured, safe, and of very high religious focus. The scholar, Maulana Raza, guided our prayers at every shrine with absolute details.',
-        packageUsed: 'Iraq Ziyarat Tour'
-      },
-      {
-        name: 'Muhammad Haris Siddiqui',
-        relation: 'Nazimabad, Karachi',
-        rating: 5,
-        text: 'Unbiased and transparent packages. No hidden costs. They delivered exactly what was written in our agreement. Our hotels in Madinah had hot Pakistani buffet styling which was delightful.',
-        packageUsed: 'Executive Umrah'
-      }
-    ],
-    destinations: [], // Kept for interface compatibility - destinations are now dynamically pulled from packages array
-    faqs: [
-      {
-        q: 'Where are your pre-departure training sessions held in Karachi?',
-        a: 'We hold complete, step-by-step physical training sessions for Hajj and Umrah pilgrims at our centralized DHA office hall. We cover flight boarding, Ahram restrictions, Tawaf guidelines, and on-ground Saudi logistics.'
-      },
-      {
-        q: 'How far are your Makkah hotels from the Haram boundary?',
-        a: 'Our premium hotels are within direct walking distance (typically 3 to 5 minutes, less than 250 meters) of the Haram boundary courtyard. We prioritize elderly-friendly streets with zero steep elevations.'
-      },
-      {
-        q: 'Are Pakistani dishes served daily in group catering packages?',
-        a: 'Yes, our custom catering services provide authentic Pakistani breakfasts, lunches, and dinners prepared by specialized chefs in Makkah, Madinah, and Najaf hotels daily.'
-      },
-      {
-        q: 'Can women travel without a Mehram under your group packages?',
-        a: 'Yes, under the updated Saudi regulations, women are legally allowed to secure Umrah visas and travel in our certified, family-guided group cohorts accompagnied by reliable terminal directors.'
-      }
-    ]
+    {
+      name: 'Hassan Raza',
+      relation: 'Islamabad (flew via KHI)',
+      rating: 5,
+      text: 'Swiss Alps package exceeded expectations. Seamless visa process, beautiful hotels and a very professional group manager. Will book Europe next year with them.',
+      packageUsed: 'Swiss Alps & Lakes'
+    },
+    {
+      name: 'Sana & Ali',
+      relation: 'Gulshan, Karachi',
+      rating: 5,
+      text: 'Hunza & Skardu trip was pure magic. Boutique stays, private jeep, and the team handled every detail. Perfect domestic luxury experience.',
+      packageUsed: 'Hunza & Skardu Premium'
+    }
+  ],
+
+  destinations: [
+    'Japan',
+    'Switzerland',
+    'Europe',
+    'Turkey',
+    'Dubai',
+    'Hunza & Skardu',
+    'Malaysia',
+    'Thailand',
+    'Custom Private Tour'
+  ],
+
+  faqs: [
+    {
+      q: 'Do you provide visa assistance for all packages?',
+      a: 'Yes. We offer complete documentation guidance and submission support for Schengen, Japan, Turkey, UK and other major destinations. Success rate remains very high for complete applications.'
+    },
+    {
+      q: 'Are the international packages fixed-departure group tours?',
+      a: 'Most of our popular itineraries run as fixed group departures with guaranteed seats. We also create fully private custom tours for families and couples.'
+    },
+    {
+      q: 'What is included in the package price?',
+      a: 'Flights (or domestic transport), hotels, daily breakfast, airport transfers, sightseeing as per itinerary, English/Urdu speaking guide, and visa assistance. Exact inclusions are listed on each package.'
+    },
+    {
+      q: 'Can we customise the itinerary or hotel category?',
+      a: 'Absolutely. We specialise in tailored private journeys. Tell us your preferred dates, hotel standard and interests and we will design a personalised proposal.'
+    },
+    {
+      q: 'Where can we meet you before booking?',
+      a: 'Our office is in DHA Phase 2 Extension, Karachi. You are welcome to visit for a detailed discussion, document review and to meet the travel consultants.'
+    }
+  ]
 };
