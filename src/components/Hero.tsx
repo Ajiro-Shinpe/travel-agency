@@ -12,7 +12,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ config, onViewPackages, onContactClick }) => {
 
   return (
-    <section className="relative overflow-hidden pt-28 lg:pt-32" id="hero-banner-section">
+    <section className="hero relative overflow-hidden pt-4 lg:pt-8" id="hero-banner-section">
       {/* Visual background image with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -24,7 +24,6 @@ export const Hero: React.FC<HeroProps> = ({ config, onViewPackages, onContactCli
           fetchPriority="high"
           id="hero-background-img"
         />
-        {/* Soft, rich, responsive dark gradient overlay */}
         <div className={`absolute inset-0 ${config.colors.heroBgGradient} z-10`} id="hero-gradient-overlay" />
       </div>
 

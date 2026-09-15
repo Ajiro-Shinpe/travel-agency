@@ -53,7 +53,7 @@ export const Packages: React.FC<PackagesProps> = ({ config }) => {
             Guaranteed Quality Journeys
           </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-bold text-white tracking-tight mt-3 mb-4">
-            Featured International & Domestic Tours
+            Featured Umrah, Hajj & Ziyarat Departures
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed font-light">
             All departures fly exclusively via certified flag carrier direct flights from Jinnah International Airport (KHI) with full hotel lockings, catering, and experienced trip coordinators.
